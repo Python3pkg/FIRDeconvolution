@@ -7,7 +7,7 @@ Created by Tomas Knapen on 2011-04-27.
 Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 """
 
-from __future__ import division
+
 
 import numpy as np
 import scipy as sp
@@ -136,7 +136,7 @@ for dec in fd.betas_per_event_type.squeeze():
     pl.plot(fd.deconvolution_interval_timepoints, dec)
 # fd.covariates, being a dictionary, cannot be assumed to maintain the event order. 
 # working on a fix here....
-pl.legend(fd.covariates.keys())
+pl.legend(list(fd.covariates.keys()))
 sn.despine()
 
 pl.axhline(0, lw=0.25, alpha=0.5, color = 'k')
@@ -191,7 +191,7 @@ for dec in fd.betas_per_event_type.squeeze():
     pl.plot(fd.deconvolution_interval_timepoints, dec)
 # fd.covariates, being a dictionary, cannot be assumed to maintain the event order. 
 # working on a fix here....
-pl.legend(fd.covariates.keys())
+pl.legend(list(fd.covariates.keys()))
 sn.despine()
 
 pl.axhline(0, lw=0.25, alpha=0.5, color = 'k')
